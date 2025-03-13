@@ -1,3 +1,0 @@
-include:
-  - iota_sandbox/docker-compose.yml
-  - ipfs_cluster/docker-compose.yml

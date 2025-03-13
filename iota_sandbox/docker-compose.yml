@@ -2,8 +2,6 @@
 # iota-sandbox v1.1.0
 # https://github.com/iotaledger/iota-sandbox
 #
-
-version: '3'
 services:
 
 ##################################################################
