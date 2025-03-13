@@ -1,3 +1,8 @@
-# IOTA sandbox dir
-iota_sandbox/
-ipfs_cluster
+# IOTA sandbox
+iota_sandbox/.env
+
+# IPFS
+# ipfs_cluster/
+
+# CLI Client
+bin/
