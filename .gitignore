@@ -1,8 +1,10 @@
 # IOTA sandbox
 iota_sandbox/.env
+iota_sandbox/data/
 
 # IPFS
-# ipfs_cluster/
+# Local IPFS cluster volume
+ipfs_cluster/compose/
 
 # CLI Client
 bin/
