@@ -12,7 +12,8 @@ print_help_exit() {
 	printf "usage: $(basename $0) [--iota] [--ipfs] [--all] [-h|--help] <mode>\n"
 	printf '\t%s\t%s\n' "<mode>" "mode for the environment start | stop"
 	printf '\t%s\t%s\n' "--iota" "compose component for IOTA environment"
-	printf '\t%s\t%s\n' "--ipfs" "install IPFS client to interact with the nodes"
+	printf '\t%s\t%s\n' "--ipfs" "compose component for IPFS environment"
+	printf '\t%s\t%s\n' "--all" "short alias for all compose at once"
     exit 0
 }
 
