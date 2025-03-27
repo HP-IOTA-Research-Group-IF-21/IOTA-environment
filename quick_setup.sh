@@ -78,7 +78,7 @@ IPFS_DIR="./ipfs_cluster"
 if [[ ! -d $IPFS_DIR ]]
 then
 	mkdir $IPFS_DIR
-	curl -L https://raw.githubusercontent.com/ipfs/ipfs-cluster/v1.1.2/docker-compose.yml > "${IPFS_DIR}/docker-compose.yml"
+	curl -L https://raw.githubusercontent.com/ipfs-cluster/ipfs-cluster/latest/docker-compose.yml > "${IPFS_DIR}/docker-compose.yml"
 	echo -e "${SUCCESS} IPFS setup download complete"
 else
 	echo -e "${SUCCESS} IPFS setup found"
@@ -101,23 +101,21 @@ then
 		echo -e "${SUCCESS} IPFS cluster ctl found: ${IPFS_CTL_DIR}"
 	fi
 
+	# IOTA WASP CLI
+	WASP_CLI_DIR="./bin/wasp_cli"
+	if [[ ! -d $WASP_CLI_DIR ]]
+	then
+		mkdir $WASP_CLI_DIR
+
+		curl -L https://github.com/iotaledger/wasp/releases/download/v1.5.3/wasp-cli_1.5.3_Linux_x86_64.tar.gz \
+		| tar -zx -C $WASP_CLI_DIR --strip-components=1
+		echo -e "${SUCCESS} WASP cli download complete"
+	else
+		echo -e "${SUCCESS} WASP cli found: ${WASP_CLI_DIR}"
+	fi
+
 	echo "To complete setup, run \"source .bashrc\" to export path to terminal"
 fi
-
-# if ! command -v iota &> /tmp/cmdpath
-# then
-# 	if [[ ! -d ./iota_client ]] &> /tmp/cmdpath
-# 	then
-# 		mkdir iota_client
-
-# 		pushd iota_client
-# 		curl -L https://github.com/iotaledger/iota/releases/download/v0.9.2-rc/iota-v0.9.2-rc-linux-x86_64.tgz | tar -zx
-# 		popd
-# 	fi
-# 	export PATH=$(pwd)/iota_client:$PATH
-# else
-# 	echo -e "${SUCCESS} iota client found:\t\t$(cat /tmp/cmdpath)"
-# fi
 
 rm /tmp/cmdpath &> /dev/null
 
