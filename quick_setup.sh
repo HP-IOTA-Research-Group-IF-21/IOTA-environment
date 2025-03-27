@@ -93,7 +93,7 @@ then
 	IPFS_CTL_DIR="./bin/ipfs_cluster_ctl"
 	if [[ ! -d $IPFS_CTL_DIR ]]
 	then
-		mkdir $IPFS_CTL_DIR
+		mkdir -p $IPFS_CTL_DIR
 		curl -L https://dist.ipfs.tech/ipfs-cluster-ctl/v1.1.2/ipfs-cluster-ctl_v1.1.2_linux-amd64.tar.gz \
 		| tar -zx -C $IPFS_CTL_DIR --strip-components=1
 		echo -e "${SUCCESS} IPFS cluster ctl download complete"
@@ -105,8 +105,7 @@ then
 	WASP_CLI_DIR="./bin/wasp_cli"
 	if [[ ! -d $WASP_CLI_DIR ]]
 	then
-		mkdir $WASP_CLI_DIR
-
+		mkdir -p $WASP_CLI_DIR
 		curl -L https://github.com/iotaledger/wasp/releases/download/v1.5.3/wasp-cli_1.5.3_Linux_x86_64.tar.gz \
 		| tar -zx -C $WASP_CLI_DIR --strip-components=1
 		echo -e "${SUCCESS} WASP cli download complete"
