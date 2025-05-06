@@ -8,11 +8,12 @@
 
 ## Monitor
 ### IOTA Sandbox
-- [localhost/dahsboard](localhost/dahsboard)
-- [localhost/wasp/dahsboard](localhost/wasp/dahsboard)
+- [localhost/dashboard](http://localhost/dashboard)
+- [localhost/wasp/dashboard](http://localhost/wasp/dashboard)
+- [localhost:8081](http://localhost:8081)
 
 ### IPFS
-- [localhost:5001/webui](localhost:5001/webui)
+- [localhost:5001/webui](https://localhost:5001/webui)
 
 ## References
 ### IOTA Sandbox

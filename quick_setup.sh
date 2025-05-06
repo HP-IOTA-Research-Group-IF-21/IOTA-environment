@@ -84,6 +84,19 @@ else
 	echo -e "${SUCCESS} IPFS setup found"
 fi
 
+# BLOCKSCOUT_DIR="./blockscout"
+# if [[ ! -d $BLOCKSCOUT_DIR ]]
+# then
+# 	mkdir $BLOCKSCOUT_DIR
+# 	pushd $BLOCKSCOUT_DIR
+# 	curl -L https://github.com/blockscout/blockscout/archive/refs/tags/v7.0.2.tar.gz | tar -zx
+# 	cp .env.example .env
+# 	popd
+# 	echo -e "${SUCCESS} Blockscout setup download complete"
+# else
+# 	echo -e "${SUCCESS} Blockscout setup found"
+# fi
+
 if [ $INSTALL_CLIENT = true ]
 then
 	# Install client binaries
